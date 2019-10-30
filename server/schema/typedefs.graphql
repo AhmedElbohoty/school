@@ -1,0 +1,63 @@
+type Teacher {
+  id: ID!
+  name: String!
+  classes: [Class]!
+  date: String
+}
+
+type Subject {
+  id: ID!
+  name: String!
+}
+
+type Class {
+  id: ID!
+  subjectId: ID!
+  teacherId: ID!
+  time: String!
+  teacher: Teacher!
+  subject: Subject!
+  date: String
+}
+
+type Query {
+  teachers: [Teacher]!
+  teacherById(id: ID!): Teacher!
+  subjects: [Subject]!
+  subjectById(id: ID!): Subject!
+  classes: [Class]!
+  classById(id: ID!): Class!
+}
+
+type Mutation {
+  newTeacher(input: NewTeacherInput!): Teacher!
+  editTeacher(input: EditTeacherInput): Teacher!
+  deleteTeacher(id: ID!): Teacher!
+  newSubject(name: String!): Subject!
+  editSubject(input: EditSubjectInput!): Subject!
+  deleteSubject(id: ID!): Subject!
+  newClass(input: NewClassInput!): Class!
+}
+
+#-----------------------#
+#        input
+#----------------------#
+input NewTeacherInput {
+  name: String!
+}
+
+input EditTeacherInput {
+  id: ID!
+  name: String!
+}
+
+input EditSubjectInput {
+  id: ID!
+  name: String!
+}
+
+input NewClassInput {
+  subjectId: ID!
+  teacherId: ID!
+  time: String!
+}
