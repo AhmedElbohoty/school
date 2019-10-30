@@ -1,0 +1,43 @@
+#main {
+  height: calc(100vh - 56px);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.main-h1 {
+  margin-bottom: 123px;
+  color: #707070;
+  font-size: 34px;
+  line-height: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.main-btns {
+  display: flex;
+}
+
+.main-btn {
+  width: 264px;
+  height: 56px;
+  border: #707070 solid 1.5px;
+  border-radius: 56px;
+  color: #707070;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  transition: color ease-in-out 300ms, background-color ease-in-out 300ms;
+}
+
+.main-btn:first-of-type {
+  margin-right: 60px;
+}
+
+.main-btn:hover {
+  color: #fff;
+  background-color: #707070;
+}
