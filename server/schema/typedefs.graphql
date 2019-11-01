@@ -30,21 +30,20 @@ type Query {
 }
 
 type Mutation {
-  newTeacher(input: NewTeacherInput!): Teacher!
+  newTeacher(name: String!): Teacher!
   editTeacher(input: EditTeacherInput): Teacher!
   deleteTeacher(id: ID!): Teacher!
   newSubject(name: String!): Subject!
   editSubject(input: EditSubjectInput!): Subject!
   deleteSubject(id: ID!): Subject!
   newClass(input: NewClassInput!): Class!
+  editClass(input: EditClassInput!): Class!
+  deleteClass(id: ID!): Class!
 }
 
 #-----------------------#
 #        input
 #----------------------#
-input NewTeacherInput {
-  name: String!
-}
 
 input EditTeacherInput {
   id: ID!
@@ -57,6 +56,13 @@ input EditSubjectInput {
 }
 
 input NewClassInput {
+  subjectId: ID!
+  teacherId: ID!
+  time: String!
+}
+
+input EditClassInput {
+  id: ID!
   subjectId: ID!
   teacherId: ID!
   time: String!

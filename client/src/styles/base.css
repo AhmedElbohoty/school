@@ -12,3 +12,11 @@ body {
 a {
   text-decoration: none;
 }
+
+button {
+  outline: none;
+}
+
+input {
+  outline: none;
+}

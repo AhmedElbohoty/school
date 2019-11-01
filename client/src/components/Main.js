@@ -8,10 +8,10 @@ function Main() {
         <h1 className="main-h1">تطبيق تنظيم جدولة لمدرسة</h1>
 
         <div className="main-btns">
-          <Link className="main-btn" to="/">
+          <Link className="main-btn" to="/teachers">
             عرض جدول التدريس
           </Link>
-          <Link className="main-btn" to="/">
+          <Link className="main-btn" to="/classes">
             عرض جدول الدروس
           </Link>
         </div>

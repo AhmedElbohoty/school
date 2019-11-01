@@ -6,13 +6,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #f6f6f6;
-  color: #707070;
   font-weight: 600;
-}
-
-.nav-logo {
-  color: #707070;
-  cursor: pointer;
 }
 
 .nav-btns {
@@ -21,6 +15,7 @@
 
 .nav-btn,
 .nav-logo {
+  color: #707070;
   cursor: pointer;
   transition: opacity ease-in-out 300ms;
 }

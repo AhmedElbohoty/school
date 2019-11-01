@@ -1,0 +1,104 @@
+.control {
+  padding-top: 64px;
+}
+
+.control-h1 {
+  margin-bottom: 34px;
+  color: #707070;
+  font-size: 34px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.control-tabs {
+  margin-bottom: 36px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.control-tab {
+  width: 115px;
+  height: 37px;
+  color: #707070;
+  background-color: #fff;
+  border-radius: 37px;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.control-tab:nth-child(2) {
+  margin: 0 22px;
+}
+
+.control-tab-active {
+  background-color: #efefef;
+}
+
+.control-btn {
+  margin-left: calc(100% - 196px);
+  margin-bottom: 8px;
+  width: 196px;
+  height: 36px;
+  border: #707070 solid 1px;
+  border-radius: 56px;
+  color: #707070;
+  background-color: #fff;
+  line-height: 34px;
+  font-family: inherit;
+  text-align: center;
+  transition: opacity ease-in-out 300ms;
+  cursor: pointer;
+}
+
+.control-btn:hover {
+  opacity: 0.7;
+}
+
+.control-btn-edit,
+.control-btn-delete {
+  width: 126px;
+  margin: 0;
+}
+
+.control-btn-edit {
+  margin-left: 24px;
+}
+
+.control-data {
+  padding: 24px 56px 60px 56px;
+  background-color: #efefef;
+}
+
+.control-data-row {
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: #707070 solid 1px;
+}
+
+.control-data-row:last-of-type {
+  border: none;
+}
+
+.control-row-title {
+  color: #707070;
+  font-weight: 600;
+}
+
+.control-data-head .control-row-title {
+  font-weight: 700;
+}
+
+.control-data-schedule .control-data-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr 45px;
+  text-align: right;
+}
+
+.control-data-schedule .control-row-title:first-of-type {
+  padding-left: 60px;
+  text-align: right;
+}

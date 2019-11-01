@@ -33,8 +33,8 @@ const resolvers = {
     }
   },
   Mutation: {
-    newTeacher(_, { input }, { models }) {
-      const newTeacher = new models.Teacher(input);
+    newTeacher(_, { name }, { models }) {
+      const newTeacher = new models.Teacher({ name });
 
       return newTeacher.save();
     },
@@ -77,6 +77,22 @@ const resolvers = {
       const newClass = new models.Class(input);
 
       return newClass.save();
+    },
+    async editClass(_, { input }, { models }) {
+      const { id, teacherId, subjectId, time } = input;
+
+      await models.Class.updateOne({ _id: id }, { teacherId, subjectId, time });
+
+      const clas = await models.Class.findById(id);
+
+      return clas;
+    },
+    async deleteClass(_, { id }, { models }) {
+      const clas = await models.Class.findById(id);
+
+      await models.Class.deleteOne({ _id: id });
+
+      return clas;
     }
   },
   Class: {

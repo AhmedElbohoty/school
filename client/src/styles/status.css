@@ -1,0 +1,13 @@
+.is-loading {
+  color: #707070;
+  text-align: center;
+  line-height: 48px;
+  background-color: #efefef;
+}
+
+.is-error {
+  color: red;
+  text-align: center;
+  line-height: 48px;
+  background-color: #efefef;
+}

@@ -6,7 +6,9 @@ function Nav() {
     <nav className="nav">
       <div className="nav-btns">
         <p className="nav-btn">تسجيل خروج</p>
-        <p className="nav-btn">لوحة التحكم</p>
+        <Link to="control-panel" className="nav-btn">
+          لوحة التحكم
+        </Link>
       </div>
 
       <Link className="nav-logo" to="/">
