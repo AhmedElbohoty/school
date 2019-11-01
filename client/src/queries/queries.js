@@ -145,5 +145,9 @@ export const TEACHERS_CLASSES = gql`
       }
       time
     }
+    subjects {
+      id
+      name
+    }
   }
 `;

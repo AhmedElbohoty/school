@@ -29,6 +29,7 @@ function App() {
           <Route exact path="/" component={Main} />
           <Route exact path="/control-panel" component={ControlPanel} />
           <Route exact path="/classes" component={ClassScheduleModel} />
+          <Route exact path="/teachers" component={ClassScheduleModel} />
         </div>
       </BrowserRouter>
     </ApolloProvider>
